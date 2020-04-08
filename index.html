@@ -1,0 +1,1128 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+    
+    <script src="src/js/jquery-3.4.1.min.js"></script> 
+
+		<link rel="stylesheet" href="src/css/reset.css">
+		<link rel="stylesheet" href="src/css/reveal.css">
+		<link rel="stylesheet" href="src/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="src/lib/css/monokai.css">
+		<link rel="stylesheet" href="src/css/background_video.css">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'src/css/print/pdf.css' : 'src/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+            
+            
+            
+
+        
+		</script>
+            
+            
+            <style>
+                img {
+                    box-shadow: none !important;
+                    background-color: rgba(0,0,0,0) !important;
+                }
+                
+                h1,h2,h3 {
+                text-shadow: 2px 2px 8px  rgba(0,0,0,0.8) !important;
+                text-transform: None !important;
+                }
+                
+                .card{
+                    
+                    background-color: rgba(255,255,255,.3) !important;
+                    color: rgba(0,0,0,0.8);
+                    padding:30px;
+                    border-radius:10px;
+                    text-align:left;
+                    width: 80%;
+                    margin-left:auto;
+                    margin-right:auto;
+                    
+                    font-weight: 400 !important;
+                    line-height: 1.725em !important;
+                    letter-spacing: -0.025em !important;
+                    
+                }
+                
+ 
+                
+                .card2{
+                    background-color: rgba(0,0,0,.1) !important;
+                    padding:30px;
+                    width: 80%;
+                    margin-left:auto;
+                    margin-right:auto;
+                    text-shadow: 2px 2px 8px  rgba(0,0,0,0.8) !important;
+                    
+                    font-weight: 500 !important;
+                    line-height: 1.725em !important;
+                    letter-spacing: -0.025em !important;
+                    
+                }
+                
+                
+                .card3{
+                    background-color: rgba(235, 0, 141, 0.7)  !important;
+                    padding:30px;
+                    width: 80%;
+                    margin-left:auto;
+                    margin-right:auto;
+                    
+                    font-weight: 500 !important;
+                    line-height: 1.725em !important;
+                    letter-spacing: -0.025em !important;
+                }
+                
+                
+                
+                .highlight {
+                    color: rgba(235, 0, 141, 1) !important 
+                }
+                
+      
+                
+                
+                
+                
+                .shadow{
+                    background-color: rgba(0,0,0,.1) !important;
+                    padding:30px;
+                    width: 80%;
+                    margin-left:auto;
+                    margin-right:auto;
+                }
+                
+
+                
+                .child_point{
+                    font-size:20px;
+                }
+                
+                
+                section{
+                    
+                    font-family: "Basier Circle", sans-serif !important;
+                        font-weight: 600 !important;
+                        line-height: 1.125em !important;
+                        letter-spacing: -0.025em !important;
+                        color: rgba(255, 255, 255,0.9) !important;
+                        font-size: 1.5rem !important;
+                        margin: 0px !important;
+                        text-align:left;
+                        
+               
+                            outline: none !important;
+                        
+                }
+                
+                img, .center_{
+                    align:center;
+                    text-align:center ;
+                    margin-left:auto !important ;
+                    margin-right:auto !important ;
+                    opacity:0.9;
+                    border:none !important;
+                }
+                
+                
+                
+                </style>
+            
+            
+            
+	</head>
+	<body>
+        
+        <video autoplay muted loop id="myVideo">
+          <source src="media/vid/background2.mp4" type="video/mp4">
+        </video>
+        
+        
+		<div class="reveal">
+			<div class="slides">
+				<section id='section_1' style='text-align:left; height:50%'> 
+                    <img src='media/img/logo.png' style='height:100px; border:none !important; background-color: none !important'>
+                     <div> Data Science Assignment <br>  <label> Richard Brooker </label> </div>  </section>
+				
+                
+                
+                
+                
+                
+                <section>
+                    
+                    <section>  <h2 class='' style='text-align:center ; font-size: 3rem !important;' > Question 1 </h2> </section>
+                    <section>  <div class='card'> <span class='highlight' > Q1) </span> "What is the difference in average transactions 7 days before the notification arrived vs. 7 days after the notification arrived, by country and age group?" </div></section>
+                    
+                    
+                    <section  data-background="media/img/buzz.jpg" data-background-size="auto 100%" > </section>
+                    
+                          
+                <!-- section> <div class='card2'> <ul><li class='fragment'>Average of what? <ul>
+                    <li class='child_point '>usd_amount? Number of transaction? Something else? </li> </ul> </li>
+                    <li class='fragment'>Average across what? <ul>
+                        <li class='child_point ' >Per user? Per transaction? Per notification?</li> </ul> </li>
+                        <li class='fragment'> "7 days before the notification"?<ul>
+                            <li class='child_point '>the 7 day period leading up to? exactly 7 days before? at least 7 days before?
+                            </li> </ul></li>
+                </ul></div></section !-->
+                
+                
+                
+               <section>   <h3>Reclarifiy the question:</32>  <div class='card2  ' style='font-size:25px'> <span class='fragment'> What is the <span class='highlight'> average difference </span> </span><span class='fragment'>, in the <span class='highlight'>number of transactions per user</span> </span><span class='fragment'>, during the <span class='highlight'>7 day period leading up to</span> a notification arriving,</span> <span class='fragment'>compared to the 7 day period after the notification has arrived.</span> <span class='fragment'> Calculate this by country <span class='highlight'> and  then</span> by age group. </span></div> </section>
+               
+               <section style='text-align:center'> Lets get the data... </section>
+                
+               <!-- section>  Use Pypika to avoid messy string formatting and concatenation,
+               <pre><code data-trim data-noescape> 
+                   from pypika import Query  Table , Case, functions as fn
+                   q = (Table('notifications').as_('n')
+                           .select(*fields) 
+                           .left_join(Table('transactions').as_('t1'))
+                           &hellip; ) 
+                    pprint(q)
+                    </code></pre> </section !-->
+               
+               
+               
+                  
+                   <section> 
+                       Our SQL query... 
+                   <pre class="col " style=' '><code class="sql" style=' zoom:1; max-height:100% !important; ' >
+                            SELECT 
+                                   n.created_date, 
+                                   u.user_id,
+                                   u.country,
+                                   CASE
+                                       WHEN 2020-u.birth_year < 18 THEN '<18'
+                                       WHEN 2020-u.birth_year<=25 THEN '18-25'
+                                       WHEN 2020-u.birth_year<=40 THEN '26-40'
+                                       WHEN 2020-u.birth_year<=55 THEN '41-55'
+                                       WHEN 2020-u.birth_year<=65 THEN '56-65'
+                                       WHEN 2020-u.birth_year>65 THEN '>65'
+                                       ELSE NULL
+                                   END age_group,
+                                   COALESCE(COUNT(distinct t2.created_date), 0)
+                                           -COALESCE(COUNT(distinct t1.created_date), 0) n_diff
+                            FROM notifications n
+                            LEFT JOIN transactions t1 ON n.user_id=t1.user_id
+                            AND DATE(t1.created_date)< DATE(n.created_date)
+                            AND DATE(t1.created_date)>=date_add(DATE(n.created_date), -7)
+                            LEFT JOIN transactions t2 ON n.user_id=t2.user_id
+                            AND DATE(t2.created_date)>=DATE(n.created_date)
+                            AND DATE(t2.created_date)< date_add(DATE(n.created_date), 7)
+                            LEFT JOIN users u ON n.user_id=u.user_id
+                            GROUP BY 1,
+                                     2,
+                                     3,
+                                     4
+                   </code></pre>
+               </section>
+               
+               <section style='width:100%' >  
+                   <div>The results...   </div>
+                   <div style='width:60% !important ; margin-left:auto ; margin-right:auto' ><img src='media/img/q1_data.png' width='100%'>  </div>
+               </section>
+               
+               
+               <section style='text-align:center'> Why do we need user level data?...  </section>
+
+               <section >  Bootstrapping! 
+                   
+                   
+                   
+               <pre style='width:50%' >
+                  <code data-trim data-noescape> 
+
+# pseudocode
+results = pd.DataFrame()
+for _ in range(1000):
+    df = raw_data.sample(frac=1, replace=True)
+    results = results.join( df.groupby('age_group').mean() ) 
+    ax = sns.distplot(results)
+                  
+                    </code></pre> 
+                    
+                   <!-- div>Age statistics,   </div !-->
+                   <div style='width:65% !important ; margin-left:auto ; margin-right:auto' ><img src='media/vid/bootstrapping_age.gif' width='100%'>  </div> 
+                   
+                   The younger you are, the more impacted the notification has. 
+               </section>
+               
+               <section height='100%' >  
+                   <div> Average number of additional transactions by country.  </div>
+                   <div style='width:80% !important ; margin-left:auto ; margin-right:auto' ><img src='media/vid/bootstrapping_country.gif' width='100%'>  </div>
+               </section>
+ 
+ 
+ <section>
+     <div class='card'>
+     Findings: <br>
+     - The younger you are, the more impacted a notification has. <br>
+     - Most impacted countries are, RO, IE and CH
+    </div>
+ </section>
+ 
+ 
+</section>
+
+
+
+                  </section>
+                  
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                
+                <section>
+                    
+                    
+                    
+                    <section>  <h3 class='' style='text-align:center ; font-size: 3rem !important;' > Question 2 </h3> </section>
+                    
+                    
+                    <section> 
+                    <div class='card'>
+                       <span class='highlight' > Q2) </span> Define a target metric to measure user engagement. How would you define an ​engaged vs. ​unengaged​ user?
+                    </div>
+                        </section>
+                        
+                        <section  data-background="media/img/why_chan.jpg" data-background-size="auto 100%" > </section>
+                        
+                        
+                        
+                        <section> 
+                            <h2>Motivations: </h2>
+                            <br>
+                            <div class='card2 fragment'> 
+                            <ul>
+                                <li class=''>Who will be using it?
+                                    <ul><li class='child_point '>Marketing? Customer care? Product teams? </li> </ul> 
+                                </li>
+                                <li class=''>What are we interested in?
+                                    <ul> <li class='child_point ' >New users? Established users?</li> </ul> 
+                                </li>
+                                <li class=''> What kind of actions are we looking to take?
+                                    <ul> <li class='child_point '>Utilization/activation? Improve retention? Cross-selling/upselling?  </li> </ul>
+                                </li>
+                                <li class=''> What are the main sources of company revenue?
+                                    <ul> <li class='child_point '>Overdraft fees? </li> </ul>
+                                </li>
+                                
+                            </ul>
+                            </div>
+                        </section>
+                        
+                        
+                        
+                        <section> 
+                            
+                            
+                            <h2> Types of engagement metric: </h2>
+                            
+                            <div class='card2'> 
+
+                        <ol class='fragment'>
+                        <li class=''><strong>Activity Time :</strong><ul>
+                        <li class='' >Time a user spends interacting with the service/site.</li>
+                        </ul>
+                        </li>
+                        <li class='' ><strong>Visit Frequency :</strong><ul>
+                            <li class='' >Return frequency, monthly page views, volume of sessions, etc </li>
+                        </ul>
+                        </li>
+                        </ul>
+                        </li>
+                        
+                        <li class='' ><strong>Core User Actions </strong> <ul>
+                        <li class='' >Sign-ups, accounts openings, balance increases, switching accounts, getting financial advice, <span class='highlight'> inbound transactions </span>. </li>
+                    </ul>
+                        </li>
+                        </ol>
+                        </div>
+                        
+                        </section>
+                        
+                        
+                        <section> 
+                        
+                        <h2> Analysis </h2>
+                        
+                        <div  style='width:80% !important ; margin-left:auto ; margin-right:auto' >
+                            
+                            <pre><code data-trim data-noescape> 
+df = (pd.read_csv( f'../data/raw_data/rev-transactions.csv' , parse_dates=['created_date'] )
+    .sort_values(['user_id','created_date'])
+    .query('direction=="INBOUND"') )
+df['days_between_transactions'] = df.groupby('user_id').created_date.transform(lambda d: d.diff().dt.days )
+ax = sns.distplot( df['days_between_transactions']  )
+
+                                 </code></pre>
+                            
+                            <img src='media/img/transaction_gap.png' width='100%'>  </div>
+                        
+                
+                        <div style='font-size:20px ; color:rgba(0,0,0,0.9)'> 90th percentile = 31.0 </div>
+                        
+                        
+                        
+                        </section>
+                        
+                        
+                        <section> 
+                        <h2> Engagement Definition </h2>
+                        <div class='card2'> 
+                        An engaged customer is someone who has had an inbound transaction within the last 30 days.
+                        </div>
+                        </section>
+                        
+                        
+                </section>
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+                <section>
+                    
+                    <section>  <h2 class='' style='text-align:center ; font-size: 3rem !important;' > Question 3 </h2> </section>
+                    
+                    
+                    <section> 
+                    <div class='card'>
+                       <span class='highlight' > Q3) </span> Using your logic from above, build a model (heuristic/statistical/ML) to classify ​engaged and ​unengaged​ users
+                    </div>
+                    </section>
+                    
+                        <!--section  data-background="media/img/is_this_ai.jpg" data-background-size="auto 100%" > </section-->
+                        
+                    
+       
+   
+     
+                    
+                    
+                    <section> 
+                    <h2> Why build a model? </h2>
+                    
+                    <div class='card2'>
+                        <ol>
+                        <li>Prediction: <ul>
+                        <li>To predict something that can't be observed directly<ul>
+                        <li>e.g. a future observation </li>
+                        <li>Data that isn't collected or we only have a sample of (e.g survey)</li>
+                        </ul>
+                        </li>
+                        </ul>
+                        </li>
+                        <li>Description:<ul>
+                        <li>We want to uncover trends/patterns<ul>
+                        <li>e.g. find drivers of engagement </li>
+                        <li>Summarize/combined multiple engagement metrics</li>
+                        </ul>
+                        </li>
+                        </ul>
+                        </li>
+                        </ol>
+                    </div>
+                    </section>
+                    
+                    <section>
+                        <div style='width:80% '>
+                        Lets build a ML pipeline to predict furture churn...
+                    </div>
+                    </section>
+                    
+                    
+                    
+                    <section  data-background-video="media/vid/mad machine_2.mp4" data-background-size="auto 100%" data-background-video-muted > </section>
+                    
+                    
+
+                    
+<!-- section  data-background-image="media/vid/metaflow_docs.gif" data-background-size="auto 100%" > </section !-->
+
+
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs000.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs043.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs086.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs106.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs136.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs167.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs199.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs231.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs273.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs308.png" data-background-size="auto 100%" > </section>
+<section  data-background-image="media/img/metaflow_gif/metaflow_docs342.png" data-background-size="auto 100%" > </section>
+
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!--section height='100% !important' style='align:center !important ; width : auto !important '>  
+                        <div style='width:100% !important ; margin-left:auto ; margin-right:auto ;  width : auto !important' >
+                            <img src='media/img/google_paper.png' style=' width : auto !important'>  
+                        </div>
+                    </section -->
+                    
+                    
+
+                                        <section>
+        
+        Machine learning has has all the difficulties of programming and more... 
+        
+        
+        <style>
+            .bullits li ul{
+                font-size: 13px;
+                line-height: 1.em !important;
+                
+            }
+            
+            .bullits li ul li ul{
+                display:none !important ;
+                
+            }
+            
+            .bullits{
+                zoom:0.88;
+                line-height: 1.2em !important;
+                
+            }
+        </style>
+        
+        <div class='card2' style='overflow:scroll ; height:500px !important' >       
+        <div class="bullits " tabindex="-1"><ol>
+        <li>Boundary Erosion<ul>
+        <li>Entanglement<ul>
+        <li>Changing one input changes everything </li>
+        </ul>
+        </li>
+        <li>Hidden Feedback Loops<ul>
+        <li>Your models learns from a system it is then impacting</li>
+        </ul>
+        </li>
+        <li>Undeclared Consumers<ul>
+        <li>Increases dependants, and additional feedback loops</li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li>Data Dependencies Cost More than Code Dependencies<ul>
+        <li>Unstable Data Dependencies<ul>
+        <li>Data quality changes over time</li>
+        </ul>
+        </li>
+        <li>Underutilized Data Dependencies<ul>
+        <li>Breadth first feature search can results in unnecessary data dependencies </li>
+        </ul>
+        </li>
+        <li>Static Analysis of Data Dependencies<ul>
+        <li>Unlike compiles, data dependencies cannot be tracked statically </li>
+        </ul>
+        </li>
+        <li>Correction Cascades<ul>
+        <li>We often reuse data/models. However this creates additional dependencies </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li>System-level Spaghetti<ul>
+        <li>Glue Code<ul>
+        <li>Using general purpose package create in glue code, and lock you into a solution</li>
+        </ul>
+        </li>
+        <li>Pipeline Jungles<ul>
+        <li>these often evolve as new signals are identified and new information sources added</li>
+        </ul>
+        </li>
+        <li>Dead Experimental Codepaths<ul>
+        <li>Experiments can results in lots of dead code</li>
+        </ul>
+        </li>
+        <li>Configuration Debt<ul>
+        <li>Pipeline configurations are often an after thought </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li>Changes in the External World<ul>
+        <li>Fixed Thresholds in Dynamic Systems<ul>
+        <li>Prediction thresholds might no longer be relevant </li>
+        </ul>
+        </li>
+        <li>When Correlations No Longer Correlate<ul>
+        <li>Variables may stop being predictive </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li>Monitoring and Testing<ul>
+        <li>Prediction Bias.<ul>
+        <li>useful tests is prediction bias </li>
+        </ul>
+        </li>
+        <li>Action Limits<ul>
+        <li>ML is at risk of leaving its desired action limits </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ol>
+        </div>
+        </div>
+                                    </section>
+
+
+
+                    
+                    
+                    
+        
+<section  data-background-image="media/img/pipeline_comparisons.png" data-background-size="auto 80%" style='height:100%' > 
+<div stly='float:left'>
+Pipeline Frameworks 
+
+</section>
+
+<!-- section  data-background-image="media/img/metaflow_logo.png" data-background-size="auto 50%" > </section !-->
+                
+                
+<style>
+
+
+
+    .logo{
+        float:left;
+    }
+    
+
+    .tile-text{
+        padding-top:35px;
+        margin-left:80px;
+
+    }
+    
+    </style>
+
+
+
+<!-- section>
+    
+    
+    <div class=card2>
+    <div class="tile-header">
+        <img src="https://metaflow.org/images/python_logo.png" width="64" class='logo'>
+        <div class="tile-text"> Model with your favorite tools </div>
+    </div>
+    <br>  
+
+    <div class="tile-header">
+        <img src="https://metaflow.org/images/metaflow_logo.png" width="64" class='logo'>
+        <div class="tile-text">               Build with Metaflow </div>
+    </div>
+    
+    <br>
+    
+    <div class="tile-header">
+        <img src="https://metaflow.org/images/aws_logo.png" width="64" class='logo'>
+        <div class="tile-text"> Powered by the AWS cloud </div>
+    </div>
+    <br>
+    
+    <div class="tile-header">
+        <img src="https://metaflow.org/images/netflix_logo.png" width="64" class='logo'>
+        <div class="tile-text">  Battle-hardened at Netflix </div>
+    </div>
+    </div>
+    
+</section !-->
+
+ 
+                
+                
+             
+                
+<!-- section  data-background-image="media/img/metaflow_example.png" data-background-size="auto 90%" > </section -->                
+
+<section  data-background-image="media/img/metaflow_pipeline.png" data-background-size="80% auto" > </section>                
+   
+<section  data-background-image="media/img/featuretools1.png" data-background-size="40% auto" > </section>                
+
+
+            
+<section data-background-size="80% auto"  style='height:100%' > 
+    
+
+    
+<pre><code data-trim data-noescape>
+import featuretools as ft
+es = ft.EntitySet(id = 'clients')
+
+es = es.entity_from_dataframe( 
+    entity_id='users',  dataframe=users  , 
+    index='user_id', time_index='created_date')
+
+es = self.es.entity_from_dataframe(
+    entity_id='transactions', 
+    dataframe=transations ,
+    index='transaction_id', 
+    time_index='created_date'
+)
+
+es = self.es.add_relationship(ft.Relationship( es['users']['user_id'], es[f'transactions']['user_id']))
+</code></pre>
+
+
+<div style='width:90% !important ; margin-left:auto ; margin-right:auto' ><img src='media/img/entity_set.png' width='100%'>  </div>
+  </section>                
+
+
+
+<section>                
+<pre><code data-trim data-noescape>
+    
+trans_primitives = [ 'weekday'  , 'hour', 'time_since_previous'] 
+agg_primitives = ['mean', 'max', 'min', 'std', 'count',  'percent_true', 'last', 'time_since_last', 'mode']  
+
+  
+feature_matrix, self.feature_defs = ft.dfs( 
+    entityset=es, 
+    target_entity='users',  
+    trans_primitives=trans_primitives , 
+    agg_primitives=agg_primitives , 
+    verbose=1 , 
+    max_depth=2  
+)
+            
+</code></pre>
+
+
+
+
+
+<div style='width:90% !important ; margin-left:auto ; margin-right:auto' ><img src='media/img/features.png' width='100%'>  </div>
+
+  </section>                
+
+
+
+
+<section data-background-size="80% auto"  style='height:%' > 
+
+
+<h2> Calculating engagement variable, </h2>
+
+
+
+
+Does a user have a transaction in the 30 day period after their cut off date,
+<pre><code data-trim data-noescape>
+    
+label = (self.users.assign(
+    label = self.transactions.query(' 0 > days_before_cutoff >= -30 ').groupby('user_id').amount_usd.sum() 
+    ).label.fillna(0) > 0).astype(int)
+    
+</code></pre>
+
+</section>           
+
+
+
+
+        
+
+<section data-background-size="auto 80%"  data-background-image='media/img/model_results.png'  style='height:100%' >
+    
+  Results...
+    
+
+ </section >         
+        
+
+
+
+
+<!--section data-background-size="auto 50%"  data-background-image='media/img/.gif'  style='height:80%' >
+    
+    
+    <img src="media/img/ngboost.png" style='height:170px; opacity: 0.97 !important; z-index:99999'>
+    
+    <div style='width:68% !important ; margin-left:auto ; margin-right:auto; margin-top:-80px;  z-index:-1 ; position:relative;' ><img src='media/img/toy_natural.gif' width='100%' style='z-index:-1'> </div>
+    
+
+ </section !-->         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+<!-- section data-background-size="80% auto"  style='height:100%' > 
+    
+<pre><code data-trim data-noescape>
+
+from sklearn.metrics import roc_curve, roc_auc_score
+fpr, tpr, thresholds = roc_curve(y_test,test_preds)
+plt.plot(fpr, tpr)
+
+</code></pre>
+<div style='width:60% !important ; margin-left:auto ; margin-right:auto' ><img src='media/img/ROC.png' height='%'>  </div> 
+
+<div style='font-size:15px; color:rgba(0,0,0,0.8); align:center; font-weight:10'>
+AUC test:  0.882
+</div>
+
+
+</section !-->           
+
+
+
+        
+<!-- section data-background-size="80% auto"  style='height:100%' > 
+    
+
+    
+<pre><code data-trim data-noescape>
+import shap 
+shap.summary_plot(shap_values, data.X_train, max_display=50 )
+</code></pre>
+
+
+<div style='width:68% !important ; margin-left:auto ; margin-right:auto' ><img src='media/img/shap.png' width='100%'> </div>
+
+  </section !-->           
+        
+
+
+
+        
+        
+
+
+</section>
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                <section>
+                    
+                    <section>  <h2 class='' style='text-align:center ; font-size: 3rem !important;' > Question 4 </h2> </section>
+                    
+                    <section> 
+                    <div class='card '>
+                       <span class='highlight' > Q4) </span> Let’s assume an ​unengaged​ user is a churned user. Now suppose we use your model to identify unengaged users and implement some business actions try to convert them to engaged users (commonly known as reducing churn)
+                        <br><br>
+                           <span class='highlight' > a) </span>  How would you set up a test/experiment to check whether we are actually reducing churn?
+                        </div>
+                        </section>
+                        
+                        
+                        <section>
+Let's assume we are conducting a randomized experiment.                        
+                        </section>
+                        
+                        
+                        <section data-background-size="auto 80%"  data-background-image='media/img/reproducibility.jpeg'  style='height:90%' >
+                            <div style='font-size:10px; text-align:center'> https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970 </div>
+                        
+                        </section>
+                        
+                        
+        
+                        
+                        <section>
+                            
+                        <div class="card2" style='width:40% ; float: left' tabindex="-1"><ul>
+                            <h2 style='color:red'> Causes </h2>
+                        <li>Poor/shallow statistical understanding </li>
+                        <li>Selective reporting </li>
+                        <li>Pressure for positive results </li>
+                        <li>Low statistical power</li>
+                        <li>Bad experiment design </li>
+                        <li>Methods/code/data is not visible </li>
+                        <li>Lack of peer review</li>
+                        </ul>
+                        </div>
+                        
+                        
+                        <div class="card2" style='width:40% ; float: right' tabindex="-1">
+                            
+                            <h2 style='color:#1E90FF'> Solutions </h2>
+                            <div class="text_cell_render rendered_html" tabindex="-1"><ul>
+                            <li>Improve statistical understanding</li>
+                            <li>Incentives better practices </li>
+                            <li>Pair programming / peer review </li>
+                            <li>Replication studies </li>
+                            <li>Share code/data publicly </li>
+                            <li>Build testing guidelines/frameworks</li>
+                            <li>Knowledge sharing/training </li>
+                            <li>Cross team validation</li>
+                            </ul>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        
+                        
+                        </section>
+                        
+                        
+                        <section>
+                            <h2> Randomized Experiment Guidelines: </h2>
+     <div class="card2 rendered_html" tabindex="-1"><ol>
+     <li><p>Make sure treatment and control are balanced </p>
+     <ul>
+     <li>Stratavised sampling, A/A testing, propensity matching </li>
+     </ul>
+     </li>
+     <li><p>Check tracking is consistent   </p>
+     <ul>
+     <li>Do they have same number of sessions/cookies?</li>
+     </ul>
+     </li>
+     <li><p>Understand what your observations are </p>
+     <ul>
+     <li>If you have split by users, then test user level stats</li>
+     </ul>
+     </li>
+     <li><p>Calculate correct statistics/confidence intervals</p>
+     <ul>
+     <li>If you are unsure about the closed form solution, try bootstrapping </li>
+     </ul>
+     </li>
+     </ol>
+     </div>
+                        </section>
+                        
+                        
+                        
+                    
+                    <section>
+                        <div class='card'>
+                            <span class='highlight' > b) </span>  What metrics and techniques would you use to assess the impact of the business action?
+                        </div>
+                    </section>
+                    
+                    
+                    
+                    
+                    
+                        <section  data-background="media/img/boil.jpg" data-background-size="auto 100%" > </section>
+                        
+                        
+                    <section>
+                        <p>When measuring the imact of an action/feature, use the following framework. </p>
+                    </section>
+                    
+                    
+                    <section>
+                        <h4 id="Step-1:--Understand-the-action">Step 1:  Understand the action<a class="anchor-link" href="#Step-1:--Understand-the-action">¶</a></h4>
+                        
+                        
+                    <div class='card2'>
+                        <ul>
+                        <li>What are the its high level goals? <ul>
+                        <li>What is it trying to solve exactly? </li>
+                        <li>Why do we believe it works?</li>
+                        </ul>
+                        </li>
+                        <li>What are its components? <ul>
+                        <li>Is it one action of a collection of actions? </li>
+                        <li>Is it the same for all users? Or is it personalized?</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                        
+                    </section>
+                        
+                        
+                    <section>
+                        <h4 id="Step-2:--Look-at-3-types-of-metrics">Step 2:  Look at 3 types of metrics<a class="anchor-link" href="#Step-2:--Look-at-3-types-of-metrics">¶</a></h4>
+                        
+                        
+                        
+                        
+                    <div class='card2'>
+                        <ul>
+                        <li>Local metrics:<ul>
+                        <li>How many people were impacted? Did anyone see it? </li>
+                    </ul>
+                        </li>
+                        <li>Behavioral metrics:<ul>
+                        <li>What was the responce? Did they engage? Convert? End their session end suddenly? </li>
+                    </ul>
+                        </li>
+                        <li>Overall impact: <ul>
+                        <li>Percentage monthly churn, monthly net new customers, average days active since sign-up, revenue churn, unbounded retention etc</li>
+                    </ul>
+                        </li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                        
+                        
+                    </section>
+                    
+                        
+                        
+                    <section>
+                        <h4 id="Step-3:-Contextualize">Step 3: Contextualize</h4>
+                        
+                        
+                        <div class='card2'>
+                        
+                        <ul>
+                        <li>How long has it been like this?<ul>
+                        <li>Does the effect decline over time? </li>
+                        </ul>
+                        </li>
+                        <li>Is it the same across all segments/countries?</li>
+                        </ul>
+                        
+                    </div>
+                    </section>
+                        
+                        
+                        <section>
+                    <h2>    Measurement Framework </h2>
+                        
+                            <div class='card2'>
+                            <ul>
+                            <li>2. Define</li>
+                            <li>2. Measure</li>
+                            <li>3. Contextualize</li>
+                            </ul>
+                        
+                        </div>
+                        
+                        
+                        </section>
+                        
+                        
+                        
+                        
+                </section>
+                
+                
+                
+
+                
+  
+                
+                
+                
+                
+                
+                
+                
+                
+			</div>
+		</div>
+
+		<script src="src/js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({ hash: true, dependencies: [ { src: 'src/plugin/markdown/marked.js' }, { src: 'src/plugin/markdown/markdown.js' },
+            { src: 'src/plugin/highlight/highlight.js' }, { src: 'src/plugin/notes/notes.js', async: true }] });
+            
+
+		</script>
+	</body>
+</html>
